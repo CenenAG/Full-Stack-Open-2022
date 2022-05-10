@@ -1,0 +1,17 @@
+note over browser:
+create the "new note"
+end note
+
+note over browser:
+add "new note" to notes array
+end note
+
+note over browser:
+redraw the notes array on screen
+end note
+
+
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa, { "content": "Description", "date": "2022-05-10T05:27:47.651Z"}
+server-->browser: {"message":"note created"}  Status Code: 201 content-type: application/json
+
